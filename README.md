@@ -26,21 +26,30 @@ o	Augmentation (rotation, flip, brightness, noise, etc.)
 ________________________________________
 🧠 5. Train the Model
 You have two options:
+
 🔵 Option 1: Train on Roboflow
 •	Click "Train Model".
 •	Roboflow will use Roboflow Universe (cloud GPU).
 •	Wait until training finishes (usually 10–30 minutes).
 •	Download the best checkpoint directly.
+
 🔶 Option 2: Train Locally Using YOLOv8
+
 •	Click "Download Dataset" → choose "YOLOv8 PyTorch" format.
 This will download:
 •	train, valid, test folders with images and .txt labels.
 •	data.yaml for YOLO.
 🏋️ 6. Train YOLOv8 Model Locally
+
 yolo task=detect mode=train model=yolov8n.pt data=data.yaml epochs=50 imgsz=640
+
 After training:
 •	Weights saved in runs/detect/train/weights/best.pt
+
+
 FinalThen Detecting .py Code
+
+
 Step	Action
 1	Upload images to Roboflow
 2	Annotate objects
